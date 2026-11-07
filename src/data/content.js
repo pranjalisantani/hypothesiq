@@ -12,4 +12,4 @@ export const projects = [
   { title: 'AirAware', category: 'IoT', text: 'Low-cost sensors and a calm, legible interface for monitoring classroom air quality.', stack: ['ESP32', 'MQTT', 'Cloud'], accent: 'from-emerald-400 to-teal-500' },
 ]
 export const resources = [['The DSA Launchpad', 'A deliberate path from fundamentals to interview-ready patterns.', 'Beginner · DSA'],['Modern Web Roadmap', 'The tools and concepts that turn ideas into reliable web products.', 'Intermediate · Web'],['ML Foundations', 'Start making sense of models, data, and meaningful evaluation.', 'Beginner · AI/ML'],['Git Team Playbook', 'Branching, reviewing, and shipping smoothly with other people.', 'All levels · Git']]
-export const team = [['ACM Student Chapter Member', 'Pranjali', '3rd Year Computer Science Engineering Student']]
+export const team = [['Engineering Student', 'Pranjali', '3rd Year Computer Science Engineering Student']]

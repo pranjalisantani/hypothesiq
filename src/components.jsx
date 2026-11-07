@@ -87,30 +87,30 @@ export function Boot({ enter }) {
       <div className="bootgrain" />
 
       <p className="bootmeta top">
-        ACM // STUDENT CHAPTER <span>BUILD 2026.08</span>
+        HYPOTHESIQ // INVESTIGATION WORKSPACE <span>BUILD 2026.11</span>
       </p>
 
       <p className="bootmeta bottom">
-        VISUAL ENGINE ONLINE <span>NETWORK: CONNECTED</span>
+        VISUAL ENGINE ONLINE <span>WORKSPACE: ACTIVE</span>
       </p>
 
       <div className="bootbox">
-        <b className="mark">ACM</b>
+        <b className="mark">HQ</b>
 
-        <p>INITIALIZING ACM SYSTEM</p>
+        <p>INITIALIZING HYPOTHESIQ SYSTEM</p>
 
         <h1>
-          ACM
+          HYPOTHESIQ
           <br />
           <i>INTERFACE</i>
         </h1>
 
         {[
-          'INITIALIZING ACM NODE',
+          'INITIALIZING HYPOTHESIQ NODE',
           'LOADING EVENT ARCHIVE',
           'CALIBRATING VISUAL FIELD',
           'SYNCING MEMBER DATA',
-          'ESTABLISHING CHAPTER LINK',
+          'CALIBRATING WORKSPACE ENVIRONMENT',
           'ATMOSPHERIC FIELD READY',
         ].map((x, i) => (
           <div className={p > (i + 1) * 13 ? 'ok' : ''} key={x}>
@@ -370,8 +370,8 @@ export function Nav() {
     <header>
       <nav className="nav glass">
         <a href="#home">
-          <b>ACM</b>
-          <span>STUDENT CHAPTER</span>
+          <b>HQ</b>
+          <span>HYPOTHESIQ</span>
         </a>
 
         <div>
@@ -385,7 +385,7 @@ export function Nav() {
           ))}
 
           <Button href="#contact">
-            JOIN ACM
+            CONNECT
           </Button>
         </div>
 
@@ -416,7 +416,7 @@ export function Nav() {
             href="#contact"
             onClick={() => setO(false)}
           >
-            JOIN ACM
+            CONNECT
           </Button>
         </aside>
       )}
@@ -535,14 +535,14 @@ export function ProfileArchive() {
       <div className="profile-portrait">
         <img
           src={profileImage}
-          alt="Pranjali, ACM Student Chapter Member"
+          alt="Pranjali, 3rd Year Computer Science Engineering Student"
         />
 
         <span>ARCHIVE // 001</span>
       </div>
 
       <div className="profile-copy">
-        <p>MEMBER // STUDENT</p>
+        <p>BUILDER // STUDENT</p>
 
         <h3>PRANJALI</h3>
 
@@ -571,7 +571,7 @@ export function ProfileArchive() {
         </div>
 
         <small>
-          ACM STUDENT CHAPTER
+          HYPOTHESIQ WORKSPACE
         </small>
       </div>
     </article>
@@ -677,14 +677,13 @@ export function Register({ event, close }) {
             <Check />
 
             <h2>
-              You’re on the list.
+              Interface Preview Complete
             </h2>
 
             <p>
-              Free event access is confirmed.
-              Connect the registration adapter
-              to a backend to collect
-              submissions.
+              This registration flow is currently an
+              interactive frontend demonstration. No personal details
+              have been stored or transmitted.
             </p>
 
             <Button onClick={close}>
@@ -700,8 +699,8 @@ export function Register({ event, close }) {
             <span>{event.title}</span>
 
             <small>
-              Open ACM event participation ·
-              No payment is required.
+              Open event participation preview ·
+              No data transmitted.
             </small>
 
             <Button
@@ -731,6 +730,10 @@ export function Register({ event, close }) {
               {event.date} · {event.type}
             </small>
 
+            <small className="demo-notice">
+              DEMO INTERFACE · SUBMISSIONS NOT RECORDED
+            </small>
+
             <form onSubmit={submit}>
               <label>
                 Name
@@ -742,17 +745,17 @@ export function Register({ event, close }) {
               </label>
 
               <label>
-                College email
+                Email
                 <input
                   required
                   name="email"
                   type="email"
-                  placeholder="you@college.edu"
+                  placeholder="you@domain.com"
                 />
               </label>
 
               <label>
-                Year / branch
+                Focus / discipline
                 <input
                   required
                   name="year"
@@ -804,7 +807,7 @@ export function Assistant() {
   const [msg, setMsg] = useState([
     {
       a: 1,
-      t: 'ACM interface online. Ask about events, joining, or projects.',
+      t: 'Hypothesiq interface online. Ask about sessions, projects, or inquiries.',
     },
   ])
 
@@ -831,11 +834,11 @@ export function Assistant() {
         ...m,
         {
           a: 1,
-          t: /event/i.test(v)
-            ? 'The Events archive has the latest schedule. Select an event to register.'
-            : /join|member/i.test(v)
-            ? 'Use JOIN ACM or send the committee a message from Contact.'
-            : 'We are a hands-on community for learning, building, and sharing.',
+          t: /event|session/i.test(v)
+            ? 'The Events archive has the latest schedule. Select a session to view details.'
+            : /join|member|connect/i.test(v)
+            ? 'Use CONNECT or send a message from Contact.'
+            : 'Hypothesiq is an engineering investigation workspace: think, test, trace.',
         },
       ])
     }, 350)
@@ -849,19 +852,19 @@ export function Assistant() {
       >
         <Sparkles />
 
-        <span>ACM ASSISTANT</span>
+        <span>HYPOTHESIQ GUIDE</span>
       </button>
 
       {o && (
         <div className="assistant glass">
           <div>
             <span>
-              <i /> ACM // ASSISTANT
+              <i /> HYPOTHESIQ // GUIDE
             </span>
 
             <button
               onClick={() => setO(false)}
-              aria-label="Close assistant"
+              aria-label="Close guide"
             >
               <X />
             </button>
@@ -886,10 +889,10 @@ export function Assistant() {
               onChange={(e) =>
                 setQ(e.target.value)
               }
-              placeholder="Ask ACM anything…"
+              placeholder="Ask about sessions or projects…"
             />
 
-            <button aria-label="Send assistant message">
+            <button aria-label="Send message">
               <Send />
             </button>
           </form>

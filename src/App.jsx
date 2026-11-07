@@ -5,7 +5,6 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   Code2,
-  ExternalLink,
   MapPin,
 } from 'lucide-react'
 
@@ -51,7 +50,9 @@ export default function App() {
     audio.current.volume = 0.18
     audio.current.preload = 'auto'
 
-    const pref = localStorage.getItem('acm-sound')
+    const pref =
+      localStorage.getItem('hypothesiq-sound') ||
+      localStorage.getItem('acm-sound')
     setSound(pref === 'on')
 
     return () => {
@@ -75,6 +76,7 @@ export default function App() {
         await audio.current.play()
 
         setSound(true)
+        localStorage.setItem('hypothesiq-sound', 'on')
         localStorage.setItem('acm-sound', 'on')
       } catch (error) {
         console.error('Audio could not start:', error)
@@ -83,6 +85,7 @@ export default function App() {
     } else {
       audio.current.pause()
       setSound(false)
+      localStorage.setItem('hypothesiq-sound', 'off')
       localStorage.setItem('acm-sound', 'off')
     }
   }
@@ -125,8 +128,8 @@ export default function App() {
             <div className="hero__grid">
               <div className="hero__copy">
                 <p>
-                  ACM // STUDENT CHAPTER{' '}
-                  <i>NETWORK FIELD: ACTIVE</i>
+                  HYPOTHESIQ // INVESTIGATION WORKSPACE{' '}
+                  <i>FIELD: ACTIVE</i>
                 </p>
 
                 <h1>
@@ -136,8 +139,8 @@ export default function App() {
                 </h1>
 
                 <span>
-                  ACM Student Chapter is a home for restless learners,
-                  generous builders, and technically curious students
+                  Hypothesiq is an engineering investigation workspace for restless learners,
+                  generous builders, and technically curious minds
                   shaping the future through computing.
                 </span>
 
@@ -154,7 +157,7 @@ export default function App() {
 
               <aside className="hero__telemetry glass">
                 <p>
-                  <b>ACM CORE</b>
+                  <b>HYPOTHESIQ CORE</b>
                   <span>ONLINE</span>
                 </p>
 
@@ -164,8 +167,8 @@ export default function App() {
                 </div>
 
                 <div>
-                  <small>COMMUNITY MODE</small>
-                  <b>BUILD / LEARN / SHARE</b>
+                  <small>SYSTEM MODE</small>
+                  <b>THINK / TEST / TRACE</b>
                 </div>
 
                 <div>
@@ -176,9 +179,9 @@ export default function App() {
             </div>
 
             <aside className="system glass">
-              <small>ACM / LIVE SIGNAL</small>
+              <small>HYPOTHESIQ / LIVE SIGNAL</small>
               <b>∞</b>
-              <span>LEARN · BUILD · SHARE</span>
+              <span>THINK · TEST · TRACE</span>
             </aside>
 
             <a className="scroll" href="#about">
@@ -187,7 +190,7 @@ export default function App() {
           </section>
 
           <section id="about" className="section about">
-            <b>ACM</b>
+            <b>HQ</b>
 
             <div>
               <Heading
@@ -199,22 +202,22 @@ export default function App() {
                     <i>starting point.</i>
                   </>
                 }
-                text="We make room for students to encounter computing as a living discipline: build things, share what works, and leave the system better for whoever arrives next."
+                text="Hypothesiq makes room for engineers to encounter computing as an empirical discipline: build things, test what works, and leave the system better for whoever arrives next."
               />
 
               <div className="facts glass">
                 <span>
-                  <b>[150+]</b>
+                  <b>150+</b>
                   MEMBERS
                 </span>
 
                 <span>
-                  <b>[24]</b>
+                  <b>24</b>
                   EVENTS HELD
                 </span>
 
                 <span>
-                  <b>[08]</b>
+                  <b>08</b>
                   ACTIVE PROJECTS
                 </span>
               </div>
@@ -288,7 +291,7 @@ export default function App() {
                   <i>wide open.</i>
                 </>
               }
-              text="Open ACM event participation. Select an event from the archive to start registration."
+              text="Open technical event participation. Select an event from the archive to start registration."
             />
 
             <article className="access-card glass">
@@ -297,7 +300,7 @@ export default function App() {
               <b>FREE</b>
 
               <span>
-                Open ACM event participation
+                Open technical event participation
               </span>
 
               <Button href="#events">
@@ -311,15 +314,15 @@ export default function App() {
             className="section members"
           >
             <Heading
-              tag="03 / ACM MEMBER ARCHIVE"
+              tag="03 / BUILDER ARCHIVE"
               title={
                 <>
-                  A chapter is not a logo.
+                  Systems are not logos.
                   <br />
-                  <i>It is people.</i>
+                  <i>They are built by people.</i>
                 </>
               }
-              text="A living archive of the students building the chapter."
+              text="A living archive of the people building and investigating with Hypothesiq."
             />
 
             <ProfileArchive />
@@ -361,9 +364,9 @@ export default function App() {
                     ))}
                   </span>
 
-                  <a href="[GITHUB LINK]">
-                    VIEW PROJECT <ExternalLink />
-                  </a>
+                  <span className="project-status">
+                    REPOSITORY PENDING
+                  </span>
                 </article>
               ))}
             </div>
@@ -382,7 +385,7 @@ export default function App() {
                   <i>leaves a trace.</i>
                 </>
               }
-              text="Verified outcomes belong here as the chapter writes its next season."
+              text="Verified outcomes belong here as the workspace writes its next season."
             />
 
             <div>
@@ -390,17 +393,17 @@ export default function App() {
                 [
                   '01',
                   'Competitions',
-                  '[ADD VERIFIED HACKATHON / CONTEST RESULT]',
+                  'Details pending verification.',
                 ],
                 [
                   '02',
                   'Community',
-                  '[ADD WORKSHOP OR COLLABORATION MILESTONE]',
+                  'Details pending verification.',
                 ],
                 [
                   '03',
                   'Growth',
-                  '[ADD CHAPTER CERTIFICATION OR MEMBER MILESTONE]',
+                  'Details pending verification.',
                 ],
               ].map((x) => (
                 <article key={x[0]}>
@@ -430,8 +433,8 @@ export default function App() {
 
             <div>
               {resources.map(([a, b, c], i) => (
-                <a
-                  href="[RESOURCE LINK]"
+                <div
+                  className="resource-item"
                   key={a}
                 >
                   <small>0{i + 1}</small>
@@ -442,8 +445,10 @@ export default function App() {
                     <p>{b}</p>
                   </span>
 
-                  <ArrowUpRight />
-                </a>
+                  <small className="resource-status">
+                    RESOURCE PENDING
+                  </small>
+                </div>
               ))}
             </div>
           </section>
@@ -462,24 +467,24 @@ export default function App() {
               </h2>
 
               <span>
-                <MapPin /> [COLLEGE NAME], [CITY]
+                <MapPin /> Location details pending
                 <br />
-                [ACM CHAPTER EMAIL]
+                Direct inquiries channel opening soon
               </span>
             </div>
 
-            <a href="mailto:[ACM CHAPTER EMAIL]">
-              START A
+            <div className="contact-action">
+              INQUIRIES
               <br />
-              CONVERSATION <ArrowUpRight />
-            </a>
+              OPENING SOON
+            </div>
           </section>
         </main>
 
         <footer>
-          ACM STUDENT CHAPTER
+          HYPOTHESIQ
           <span>
-            BUILT BY THE ACM STUDENT CHAPTER
+            THINK. TEST. TRACE.
           </span>{' '}
           © 2026
         </footer>
