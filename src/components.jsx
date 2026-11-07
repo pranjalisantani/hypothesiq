@@ -460,10 +460,10 @@ export function Heading({ tag, title, text }) {
 }
 
 /*
-  IMPORTANT FIX:
+  IMPORTANT:
   GitHub Pages serves this project under:
 
-  /acm-student-chapter/
+  /hypothesiq/
 
   Therefore the profile image must use BASE_URL.
 */
@@ -521,7 +521,7 @@ export function ProfileArchive() {
     /assets/images/pranjali-profile.jpeg
 
     we use:
-    /acm-student-chapter/assets/images/pranjali-profile.jpeg
+    /hypothesiq/assets/images/pranjali-profile.jpeg
   */
   const profileImage = `${import.meta.env.BASE_URL}assets/images/pranjali-profile.jpeg`
 
