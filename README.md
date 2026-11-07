@@ -6,7 +6,6 @@ An independent, interactive engineering investigation workspace designed for tec
 
 [![Deploy Vite site to GitHub Pages](https://github.com/pranjalisantani/hypothesiq/actions/workflows/deploy.yml/badge.svg)](https://github.com/pranjalisantani/hypothesiq/actions/workflows/deploy.yml)
 [![Live Site](https://img.shields.io/badge/Live-GitHub%20Pages-0a84ff)](https://pranjalisantani.github.io/hypothesiq/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
@@ -97,8 +96,3 @@ Every push to the `main` branch triggers:
 * **Architect & Developer**: **Pranjali Santani**
 * **GitHub Profile**: [@pranjalisantani](https://github.com/pranjalisantani)
 
----
-
-## 7. License
-
-This project is open source and available under the [MIT License](LICENSE).
