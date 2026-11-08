@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="hero-glow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#00e5ff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#05070a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aperture-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#0a84ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0a84ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#0a84ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="text-title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#0a84ff"/>
+    </linearGradient>
+    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.45"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Canvas Base -->
+  <rect width="1200" height="440" rx="16" fill="#07090e"/>
+  <rect width="1200" height="440" rx="16" fill="url(#hero-glow)"/>
+  <rect width="1200" height="440" rx="16" fill="url(#grid-pattern)"/>
+  <rect x="0.5" y="0.5" width="1199" height="439" rx="15.5" fill="none" stroke="url(#border-grad)" stroke-width="1"/>
+
+  <!-- Telemetry Corner Brackets -->
+  <path d="M 28 44 L 28 28 L 44 28" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M 1172 44 L 1172 28 L 1156 28" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M 28 396 L 28 412 L 44 412" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M 1172 396 L 1172 412 L 1156 412" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- Technical Header Strip -->
+  <text x="60" y="42" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#64748b" letter-spacing="2">SYS::HYPOTHESIQ // CORE_WORKSPACE_V0.1</text>
+  <circle cx="1110" cy="38" r="4" fill="#10b981" filter="url(#glow-blur)"/>
+  <text x="1122" y="42" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#10b981" letter-spacing="1.5">ONLINE</text>
+
+  <!-- Central Visual Mark / Aperture Motif -->
+  <g transform="translate(600, 160)">
+    <!-- Ambient Radial Halo -->
+    <circle cx="0" cy="0" r="110" fill="url(#aperture-glow)"/>
+
+    <!-- Outer Orbit Ring with Ticks -->
+    <circle cx="0" cy="0" r="76" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="76" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="14 180" stroke-linecap="round"/>
+
+    <!-- Secondary Dashed Orbit -->
+    <circle cx="0" cy="0" r="54" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 8" stroke-opacity="0.6"/>
+
+    <!-- Geometric Hex-Aperture Vector -->
+    <polygon points="0,-36 31.18,-18 31.18,18 0,36 -31.18,18 -31.18,-18" fill="#0b1329" stroke="#38bdf8" stroke-width="1.5"/>
+    <polygon points="0,-24 20.78,-12 20.78,12 0,24 -20.78,12 -20.78,-12" fill="#080e1a" stroke="#00e5ff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="8" fill="#0a84ff" filter="url(#glow-blur)"/>
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
+
+    <!-- Telemetry Crosshairs -->
+    <line x1="-95" y1="0" x2="-82" y2="0" stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="82" y1="0" x2="95" y2="0" stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="0" y1="-95" x2="0" y2="-82" stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="0" y1="82" x2="0" y2="95" stroke="#00e5ff" stroke-width="1.5"/>
+
+    <!-- Dynamic Waveform Lines Left & Right -->
+    <path d="M -110 0 C -160 0, -180 -25, -240 -25 C -300 -25, -340 25, -420 25 L -490 25" fill="none" stroke="#0a84ff" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="5 4"/>
+    <circle cx="-420" cy="25" r="2.5" fill="#38bdf8"/>
+    <path d="M 110 0 C 160 0, 180 25, 240 25 C 300 25, 340 -25, 420 -25 L 490 -25" fill="none" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="5 4"/>
+    <circle cx="420" cy="-25" r="2.5" fill="#00e5ff"/>
+  </g>
+
+  <!-- Main Brand Title & Hierarchy -->
+  <g text-anchor="middle">
+    <!-- Brand Title -->
+    <text x="600" y="278" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="800" fill="url(#text-title-grad)" letter-spacing="14">HYPOTHESIQ</text>
+
+    <!-- Tagline: THINK . TEST . TRACE -->
+    <g transform="translate(600, 312)">
+      <text x="-160" y="0" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="14" font-weight="700" fill="#38bdf8" letter-spacing="4">THINK</text>
+      <circle cx="-85" cy="-4" r="2.5" fill="#64748b"/>
+      <text x="0" y="0" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="14" font-weight="700" fill="#f8fafc" letter-spacing="4">TEST</text>
+      <circle cx="85" cy="-4" r="2.5" fill="#64748b"/>
+      <text x="160" y="0" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="14" font-weight="700" fill="#00e5ff" letter-spacing="4">TRACE</text>
+    </g>
+
+    <!-- Subtitle Definition -->
+    <text x="600" y="344" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400" fill="#94a3b8" letter-spacing="1.5">AN INDEPENDENT, EMPIRICAL ENGINEERING INVESTIGATION WORKSPACE</text>
+  </g>
+
+  <!-- Bottom Telemetry Metric Cards -->
+  <g transform="translate(60, 375)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="245" height="36" rx="6" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <text x="16" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">ARCHITECTURE</text>
+    <text x="230" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#f1f5f9" text-anchor="end">REACT 19 + VITE 8</text>
+
+    <!-- Card 2 -->
+    <rect x="278" y="0" width="245" height="36" rx="6" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <text x="294" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">INTERFACE</text>
+    <text x="508" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="end">CINEMATIC 3D TILT</text>
+
+    <!-- Card 3 -->
+    <rect x="556" y="0" width="245" height="36" rx="6" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <text x="572" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">RELIABILITY</text>
+    <text x="786" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#10b981" text-anchor="end">DETERMINISTIC CI/CD</text>
+
+    <!-- Card 4 -->
+    <rect x="834" y="0" width="246" height="36" rx="6" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <text x="850" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">HOSTING</text>
+    <text x="1064" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#00e5ff" text-anchor="end">GITHUB PAGES</text>
+  </g>
+</svg>

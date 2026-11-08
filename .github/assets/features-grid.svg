@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="auto">
+  <defs>
+    <radialGradient id="feature-glow" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#07090e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="micro-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" rx="14" fill="#080b11"/>
+  <rect width="1200" height="420" rx="14" fill="url(#micro-grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="13.5" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Top Bar -->
+  <text x="40" y="38" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#38bdf8" letter-spacing="2">KEY ARCHITECTURAL FEATURES // CORE CAPABILITIES</text>
+  <text x="1160" y="38" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#64748b" text-anchor="end">EXPERIENCE ENGINE</text>
+  <line x1="40" y1="52" x2="1160" y2="52" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ==================== CARD 1: ATMOSPHERE & CURSOR (X: 40, Y: 72, W: 545, H: 150) ==================== -->
+  <g transform="translate(40, 72)">
+    <rect width="545" height="150" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect width="545" height="150" rx="8" fill="url(#feature-glow)"/>
+    <rect x="0" y="0" width="3" height="150" rx="1.5" fill="#38bdf8"/>
+
+    <!-- Icon: Orbital Canvas Particles -->
+    <g transform="translate(40, 45)">
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#1e293b" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 3"/>
+      <circle cx="-6" cy="-4" r="2.5" fill="#00e5ff"/>
+      <circle cx="8" cy="2" r="2" fill="#38bdf8"/>
+      <circle cx="-2" cy="7" r="1.5" fill="#f8fafc"/>
+      <line x1="-6" y1="-4" x2="8" y2="2" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+    </g>
+
+    <text x="75" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Atmospheric Particle Canvas &amp; Cursor Telemetry</text>
+    <text x="75" y="58" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#38bdf8">CANVAS2D // INTERACTIVE PHYSICS // HUD TRACKING</text>
+    <text x="75" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Hardware-accelerated continuous particle simulation with radial repulsion and real-time pointer coordinate telemetry tracking across workspace viewports.</text>
+
+    <g transform="translate(75, 122)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">
+      <text x="0" y="0">MOTION: REDUCED-MOTION AWARE</text>
+      <text x="220" y="0">RADIAL DRIFT: ENABLED</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 2: 3D TILT CARDS (X: 615, Y: 72, W: 545, H: 150) ==================== -->
+  <g transform="translate(615, 72)">
+    <rect width="545" height="150" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect width="545" height="150" rx="8" fill="url(#feature-glow)"/>
+    <rect x="0" y="0" width="3" height="150" rx="1.5" fill="#00e5ff"/>
+
+    <!-- Icon: 3D Perspective Box -->
+    <g transform="translate(40, 45)">
+      <polygon points="0,-14 14,-6 14,10 0,18 -14,10 -14,-6" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+      <line x1="0" y1="18" x2="0" y2="2" stroke="#00e5ff" stroke-width="1.2"/>
+      <line x1="-14" y1="-6" x2="0" y2="2" stroke="#00e5ff" stroke-width="1.2"/>
+      <line x1="14" y1="-6" x2="0" y2="2" stroke="#00e5ff" stroke-width="1.2"/>
+    </g>
+
+    <text x="75" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Perspective-Correct 3D Tilt Engine</text>
+    <text x="75" y="58" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#00e5ff">CSS 3D TRANSFORM // SPECULAR REFLECTION</text>
+    <text x="75" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Interactive builder cards with cursor-relative Euler angle rotation, dynamic radial glare reflections, and high-fidelity depth segregation.</text>
+
+    <g transform="translate(75, 122)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">
+      <text x="0" y="0">MAX TILT: ±2.5°</text>
+      <text x="120" y="0">EASING: SPRING-DAMPED</text>
+      <text x="280" y="0">GLARE: OPACITY-INTERPOLATED</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 3: DIAGNOSTIC & GUIDE (X: 40, Y: 240, W: 545, H: 150) ==================== -->
+  <g transform="translate(40, 240)">
+    <rect width="545" height="150" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect width="545" height="150" rx="8" fill="url(#feature-glow)"/>
+    <rect x="0" y="0" width="3" height="150" rx="1.5" fill="#f8fafc"/>
+
+    <!-- Icon: Terminal Console -->
+    <g transform="translate(40, 45)">
+      <rect x="-16" y="-12" width="32" height="24" rx="3" fill="none" stroke="#f8fafc" stroke-width="1.2"/>
+      <path d="M -10 -4 L -5 0 L -10 4" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="-2" y1="4" x2="6" y2="4" stroke="#f8fafc" stroke-width="1.5"/>
+    </g>
+
+    <text x="75" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Diagnostic Boot Sequence &amp; Assistant Guide</text>
+    <text x="75" y="58" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#f8fafc">STATE MACHINE // RULE-BASED INQUIRY ENGINE</text>
+    <text x="75" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Interactive calibration sequence and built-in HYPOTHESIQ Guide providing instant context routing, architectural answers, and inquiry assistance.</text>
+
+    <g transform="translate(75, 122)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">
+      <text x="0" y="0">CALIBRATION: 6-STAGE</text>
+      <text x="160" y="0">ASSISTANT: LOCAL RULES</text>
+      <text x="320" y="0">DEPENDENCY: ZERO EXT</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 4: HONESTY & AUDIO (X: 615, Y: 240, W: 545, H: 150) ==================== -->
+  <g transform="translate(615, 240)">
+    <rect width="545" height="150" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect width="545" height="150" rx="8" fill="url(#feature-glow)"/>
+    <rect x="0" y="0" width="3" height="150" rx="1.5" fill="#10b981"/>
+
+    <!-- Icon: Shield / Checkmark / Audio Pulse -->
+    <g transform="translate(40, 45)">
+      <path d="M 0 -14 L 14 -7 L 14 6 C 14 13 0 18 0 18 C 0 18 -14 13 -14 6 L -14 -7 Z" fill="none" stroke="#10b981" stroke-width="1.2"/>
+      <polyline points="-5,1 -1,5 6,-2" fill="none" stroke="#10b981" stroke-width="1.5"/>
+    </g>
+
+    <text x="75" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Product Honesty &amp; HTML5 Ambient Audio</text>
+    <text x="75" y="58" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#10b981">CLIENT DEMO NOTICES // STREAMED PLAYBACK</text>
+    <text x="75" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8">Transparent non-transmission disclaimers on all forms, explicit demonstration indicators, and user-controlled looping ambient audio (struct.mpeg).</text>
+
+    <g transform="translate(75, 122)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" fill="#64748b">
+      <text x="0" y="0">TRANSMISSION: NONE</text>
+      <text x="160" y="0">AUDIO: DUAL-KEY SYNC</text>
+      <text x="320" y="0">METRICS: AUTHENTIC ONLY</text>
+    </g>
+  </g>
+</svg>

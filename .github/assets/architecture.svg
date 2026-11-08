@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="auto">
+  <defs>
+    <linearGradient id="tier-header-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0a84ff"/>
+    </linearGradient>
+    <linearGradient id="tier-header-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <pattern id="diag-lines" width="20" height="20" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="20" x2="20" y2="0" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" rx="14" fill="#07090e"/>
+  <rect width="1200" height="480" rx="14" fill="url(#diag-lines)"/>
+  <rect x="0.5" y="0.5" width="1199" height="479" rx="13.5" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Header Strip -->
+  <text x="40" y="38" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#38bdf8" letter-spacing="2">SYSTEM ARCHITECTURE // TOPOLOGY &amp; DATAFLOW</text>
+  <text x="1160" y="38" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11" fill="#64748b" text-anchor="end">CLIENT-SIDE STATIC WORKSPACE</text>
+  <line x1="40" y1="52" x2="1160" y2="52" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- TIER 1: CLIENT PRESENTATION & IMMERSION (Y: 72, H: 82) -->
+  <g transform="translate(40, 72)">
+    <rect width="1120" height="82" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="82" rx="2" fill="#38bdf8"/>
+    <text x="24" y="24" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1.5">TIER 01 // IMMERSIVE PRESENTATION LAYER</text>
+
+    <!-- 4 Sub-blocks -->
+    <g transform="translate(24, 38)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11">
+      <rect x="0" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Atmosphere Particle Canvas</text>
+
+      <rect x="270" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">3D Perspective Tilt Engine</text>
+
+      <rect x="540" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">HTML5 Looping Audio (struct.mpeg)</text>
+
+      <rect x="810" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Hardware-Tracked Cursor HUD</text>
+    </g>
+  </g>
+
+  <!-- Connectors 1 to 2 -->
+  <line x1="600" y1="154" x2="600" y2="174" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="600,176 597,170 603,170" fill="#38bdf8"/>
+
+  <!-- TIER 2: WORKSPACE & STATE ROUTING (Y: 176, H: 82) -->
+  <g transform="translate(40, 176)">
+    <rect width="1120" height="82" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="82" rx="2" fill="#00e5ff"/>
+    <text x="24" y="24" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#00e5ff" letter-spacing="1.5">TIER 02 // WORKSPACE STATE &amp; INTERACTION CONTROL</text>
+
+    <!-- 4 Sub-blocks -->
+    <g transform="translate(24, 38)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11">
+      <rect x="0" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Diagnostic Boot State Machine</text>
+
+      <rect x="270" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">HYPOTHESIQ Guide Assistant</text>
+
+      <rect x="540" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Archive Taxonomy Filter View</text>
+
+      <rect x="810" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Dual-Key Audio LocalStorage</text>
+    </g>
+  </g>
+
+  <!-- Connectors 2 to 3 -->
+  <line x1="600" y1="258" x2="600" y2="278" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="600,280 597,274 603,274" fill="#00e5ff"/>
+
+  <!-- TIER 3: DATA ARCHIVE & PRODUCT HONESTY (Y: 280, H: 82) -->
+  <g transform="translate(40, 280)">
+    <rect width="1120" height="82" rx="8" fill="#0c1017" stroke="#1e293b" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="82" rx="2" fill="#10b981"/>
+    <text x="24" y="24" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#10b981" letter-spacing="1.5">TIER 03 // DATA ARCHIVE &amp; HONESTY SPECIFICATION</text>
+
+    <!-- 4 Sub-blocks -->
+    <g transform="translate(24, 38)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11">
+      <rect x="0" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Modular Content (src/data/content.js)</text>
+
+      <rect x="270" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Builder Archive &amp; Leadership</text>
+
+      <rect x="540" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Non-Transmission Client Guard</text>
+
+      <rect x="810" y="0" width="250" height="32" rx="4" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="20" fill="#f1f5f9">Location Pending Indicators</text>
+    </g>
+  </g>
+
+  <!-- Connectors 3 to 4 -->
+  <line x1="600" y1="362" x2="600" y2="382" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="600,384 597,378 603,378" fill="#10b981"/>
+
+  <!-- TIER 4: BUILD & INFRASTRUCTURE PIPELINE (Y: 384, H: 68) -->
+  <g transform="translate(40, 384)">
+    <rect width="1120" height="68" rx="8" fill="#0a0f18" stroke="#1e293b" stroke-width="1"/>
+    <rect x="0" y="0" width="4" height="68" rx="2" fill="#64748b"/>
+    <text x="24" y="22" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="1.5">TIER 04 // REPRODUCIBLE BUILD &amp; DEPLOYMENT</text>
+
+    <g transform="translate(24, 32)" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="11">
+      <text x="0" y="16" fill="#64748b">Vite 8 Compiler</text>
+      <text x="150" y="16" fill="#38bdf8">➔</text>
+      <text x="180" y="16" fill="#64748b">Rollup Gzip Optimize</text>
+      <text x="370" y="16" fill="#38bdf8">➔</text>
+      <text x="400" y="16" fill="#64748b">GitHub Actions (Ubuntu-Latest)</text>
+      <text x="680" y="16" fill="#38bdf8">➔</text>
+      <text x="710" y="16" fill="#64748b">GitHub Pages Artifact v4</text>
+      <text x="940" y="16" fill="#10b981">➔ HTTPS 200 OK</text>
+    </g>
+  </g>
+</svg>
