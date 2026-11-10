@@ -50,9 +50,15 @@ export default function App() {
     audio.current.volume = 0.18
     audio.current.preload = 'auto'
 
-    const pref =
-      localStorage.getItem('hypothesiq-sound') ||
-      localStorage.getItem('acm-sound')
+    let pref = localStorage.getItem('hypothesiq-sound')
+    if (pref === null) {
+      const legacy = localStorage.getItem('acm-sound')
+      if (legacy !== null) {
+        pref = legacy
+        localStorage.setItem('hypothesiq-sound', legacy)
+        localStorage.removeItem('acm-sound')
+      }
+    }
     setSound(pref === 'on')
 
     return () => {
@@ -77,7 +83,6 @@ export default function App() {
 
         setSound(true)
         localStorage.setItem('hypothesiq-sound', 'on')
-        localStorage.setItem('acm-sound', 'on')
       } catch (error) {
         console.error('Audio could not start:', error)
         setSound(false)
@@ -86,7 +91,6 @@ export default function App() {
       audio.current.pause()
       setSound(false)
       localStorage.setItem('hypothesiq-sound', 'off')
-      localStorage.setItem('acm-sound', 'off')
     }
   }
 
